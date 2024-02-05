@@ -20,7 +20,7 @@ const CreateBook = () => {
       publishYear
     }
     setLoading(true);
-    axios.post('http://localhost:5555/books', data)
+    axios.post('https://mern-app-backend-rust.vercel.app/books', data)
     .then(() => {
       setLoading(false);
       enqueueSnackbar('Book Created Successfully', { variant: 'success' });
@@ -39,7 +39,7 @@ const CreateBook = () => {
       <BackButton />
       <h1 className='text-3xl my-4'>Create Book</h1>
       {loading ? <Spinner /> : ''}
-      <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
+      <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] max-w-full p-4 mx-auto">
         <div className="my-4">
           <label className="text-xl mr-4 text-gray-500">Title</label>
           <input 

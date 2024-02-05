@@ -18,7 +18,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      .get(`https://mern-app-backend-rust.vercel.app/books/${id}`)
       .then((response) => {
         console.log(response.data);
         setTitle(response.data.title);
@@ -42,7 +42,7 @@ const EditBook = () => {
     }
     setLoading(true);
     axios
-    .put(`http://localhost:5555/books/${id}`, data)
+    .put(`https://mern-app-backend-rust.vercel.app/books/${id}`, data)
     .then(() => {
       setLoading(false);
       enqueueSnackbar('Book Edited Successfully', { variant: 'success'});
@@ -61,7 +61,7 @@ const EditBook = () => {
       <BackButton />
       <h1 className='text-3xl my-4'>Edit Book</h1>
       {loading ? <Spinner /> : ''}
-      <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
+      <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] max-w-full p-4 mx-auto">
         <div className="my-4">
           <label className="text-xl mr-4 text-gray-500">Title</label>
           <input 

@@ -20,7 +20,7 @@ app.use(express.json());
 // Option 2: Allow Custom Origin
 app.use(
     cors({
-        origin: 'http://localhost:3000',
+        origin: 'https://mern-app-frontend-rouge.vercel.app',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type']
     })

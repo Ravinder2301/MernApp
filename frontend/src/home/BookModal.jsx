@@ -10,7 +10,7 @@ const BookModal = ({ item, onClose }) => {
     >
       <div
         onClick={(event) => event.stopPropagation()}
-        className='w-[600px] m-1 max-w-full h-[400px] bg-white rounded-xl p-4 flex flex-col relative'
+        className='w-[600px] m-1 max-w-full bg-white rounded-xl p-4 flex flex-col relative'
       >
         <AiOutlineClose className='absolute right-6 top-6 text-3xl text-red-600 cursor-pointer'
             onClick={onClose}

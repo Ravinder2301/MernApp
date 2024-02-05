@@ -20,7 +20,7 @@ const CreateBook = () => {
       publishYear
     }
     setLoading(true);
-    axios.post('https://mern-app-backend-ten.vercel.app/books', data)
+    axios.post('https://mern-app-backend-rust.vercel.app/books', data)
     .then(() => {
       setLoading(false);
       enqueueSnackbar('Book Created Successfully', { variant: 'success' });
